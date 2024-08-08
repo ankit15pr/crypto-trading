@@ -1,2 +1,2 @@
 # crypto-trading
-A trading plateform
+A trading platform
