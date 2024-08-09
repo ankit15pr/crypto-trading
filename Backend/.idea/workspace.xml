@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e01c0262-4da6-4920-9e6a-e5e67805ac59" name="Changes" comment="" />
+    <list default="true" id="e01c0262-4da6-4920-9e6a-e5e67805ac59" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/modal/TwoFactorOTP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/modal/VerificationCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/repository/TwoFactorOtpRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/repository/VerificationCodeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/TwoFactorOtpService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/TwoFactorOtpServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/VerificationCodeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/VerificationCodeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/utils/OtpUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/controller/AuthController.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +39,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/config/AppConfig.java" root0="SKIP_INSPECTION" />
@@ -27,11 +47,21 @@
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/config/JwtProvider.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/config/JwtTokenValidator.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/controller/AuthController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/controller/UserController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/domain/USER_ROLE.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/TwoFactorOTP.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/User.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/VerificationCode.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/repository/TwoFactorOtpRepository.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/repository/UserRepository.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/response/AuthResponse.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/CustomUserDetailsService.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/EmailService.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/TwoFactorOtpService.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/TwoFactorOtpServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/UserServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/VerificationCodeServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/utils/OtpUtils.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -56,6 +86,7 @@
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Spring Boot.TradingApplication.executor&quot;: &quot;Run&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -104,7 +135,9 @@
       <workItem from="1722890590337" duration="1519000" />
       <workItem from="1722948972713" duration="2973000" />
       <workItem from="1722951977169" duration="22981000" />
-      <workItem from="1723117365881" duration="714000" />
+      <workItem from="1723117365881" duration="1701000" />
+      <workItem from="1723180407718" duration="6664000" />
+      <workItem from="1723217284131" duration="6475000" />
     </task>
     <servers />
   </component>
