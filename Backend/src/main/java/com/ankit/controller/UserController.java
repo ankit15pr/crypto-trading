@@ -1,15 +1,24 @@
 package com.ankit.controller;
 
+import com.ankit.request.ForgetPasswordTokenRequest;
 import com.ankit.domain.VerificationType;
+import com.ankit.modal.ForgetPasswordToken;
 import com.ankit.modal.User;
 import com.ankit.modal.VerificationCode;
+import com.ankit.request.ResetPasswordRequest;
+import com.ankit.response.ApiResponse;
+import com.ankit.response.AuthResponse;
 import com.ankit.service.EmailService;
+import com.ankit.service.ForgetPasswordService;
 import com.ankit.service.UserService;
 import com.ankit.service.VerificationCodeService;
+import com.ankit.utils.OtpUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.UUID;
 
 @RestController
 public class UserController {
@@ -22,6 +31,9 @@ public class UserController {
 
     @Autowired
     private VerificationCodeService verificationCodeService;
+
+    @Autowired
+    private ForgetPasswordService forgetPasswordService;
 
     private String jwt;
 
@@ -50,6 +62,7 @@ public class UserController {
         return new ResponseEntity<>("Verification otp sent successfully", HttpStatus.OK);
     }
 
+    //two factor auth email verify
     @PatchMapping("/api/users/enable-two-factor/verify-otp/{otp}")
     public ResponseEntity<User> enableTwoFactorAuthentication(@PathVariable String otp, @RequestHeader("Authorization") String jwt) throws Exception {
         User user=userService.findUserProfileByJwt(jwt);
@@ -67,4 +80,49 @@ public class UserController {
         }
         throw new Exception("Invalid otp");
     }
+
+    //forget otp email sent
+    @PostMapping("/auth/users/reset-password/send-otp")
+    public ResponseEntity<AuthResponse> sendForgetPasswordOtp(@RequestBody ForgetPasswordTokenRequest req) throws Exception {
+
+        User user=userService.findUserByEmail(req.getSendTo());
+        String otp = OtpUtils.generateOTP();
+        UUID uuid=UUID.randomUUID();
+        String id = uuid.toString();
+
+        ForgetPasswordToken token =  forgetPasswordService.findByUser(user.getId());
+
+        if(token==null){
+            token=forgetPasswordService.createToken(user,id, otp, req.getVerificationType(),req.getSendTo());
+        }
+
+        if(req.getVerificationType().equals(VerificationType.EMAIL)){
+            emailService.sendVerificationOtpEmail(user.getEmail(), token.getOtp());
+        }
+
+        AuthResponse response = new AuthResponse();
+        response.setSession(token.getId());
+        response.setMessage("Password reset otp sent successfully");
+
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+    //Verify forget password otp
+    @PatchMapping("/auth/users/reset-password/verify-otp")
+    public ResponseEntity<ApiResponse> resetpassword(@RequestParam String id, @RequestBody ResetPasswordRequest req, @RequestHeader("Authorization") String jwt) throws Exception {
+
+
+        ForgetPasswordToken forgetPasswordToken=forgetPasswordService.findById(id);
+
+        boolean isVerified=forgetPasswordToken.getOtp().equals(req.getOtp());
+
+        if(isVerified){
+            userService.updatePassword(forgetPasswordToken.getUser(), req.getPassword());
+            ApiResponse res = new ApiResponse();
+            res.setMessage("Password update successfully");
+            return new ResponseEntity<>(res, HttpStatus.ACCEPTED);
+        }
+        throw  new Exception("Invalid otp");
+    }
+
 }
