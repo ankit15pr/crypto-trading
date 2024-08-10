@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e01c0262-4da6-4920-9e6a-e5e67805ac59" name="Changes" comment="Create two factor authentication and verification api">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/modal/ForgetPasswordToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/repository/ForgetPasswordRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/request/ForgetPasswordTokenRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/request/ResetPasswordRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/response/ApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/ForgetPasswordService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/ForgotPasswordImpl.java" afterDir="false" />
+    <list default="true" id="e01c0262-4da6-4920-9e6a-e5e67805ac59" name="Changes" comment="Create forget password Api">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/controller/CoinController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/modal/Coin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/repository/CoinRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/CoinService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/CoinServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,17 +35,21 @@
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/config/JwtProvider.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/config/JwtTokenValidator.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/controller/AuthController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/controller/CoinController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/controller/UserController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/domain/USER_ROLE.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/Coin.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/TwoFactorOTP.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/User.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/VerificationCode.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/repository/TwoFactorOtpRepository.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/repository/UserRepository.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/response/AuthResponse.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/CoinService.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/CoinServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/CustomUserDetailsService.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/EmailService.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/ForgetPassword.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/ForgetPasswordService.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/TwoFactorOtpService.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/TwoFactorOtpServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/UserServiceImpl.java" root0="SKIP_INSPECTION" />
@@ -130,7 +131,7 @@
       <workItem from="1723117365881" duration="1701000" />
       <workItem from="1723180407718" duration="6664000" />
       <workItem from="1723217284131" duration="8738000" />
-      <workItem from="1723301276468" duration="3749000" />
+      <workItem from="1723301276468" duration="13477000" />
     </task>
     <task id="LOCAL-00001" summary="Create two factor authentication and verification api">
       <option name="closed" value="true" />
@@ -140,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723223932508</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Create forget password Api">
+      <option name="closed" value="true" />
+      <created>1723305331222</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723305331222</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +207,7 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="Create two factor authentication and verification api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create two factor authentication and verification api" />
+    <MESSAGE value="Create forget password Api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create forget password Api" />
   </component>
 </project>
