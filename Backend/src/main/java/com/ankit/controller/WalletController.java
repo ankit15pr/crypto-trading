@@ -1,10 +1,9 @@
 package com.ankit.controller;
 
-import com.ankit.modal.Order;
-import com.ankit.modal.User;
-import com.ankit.modal.Wallet;
-import com.ankit.modal.WalletTransaction;
+import com.ankit.modal.*;
+import com.ankit.response.PaymentResponse;
 import com.ankit.service.OrderService;
+import com.ankit.service.PaymentService;
 import com.ankit.service.UserService;
 import com.ankit.service.WalletService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +23,9 @@ public class WalletController {
 
     @Autowired
     private OrderService orderService;
+
+    @Autowired
+    private PaymentService paymentService;
 
     @GetMapping("/api/wallet")
     public ResponseEntity<Wallet> getUserWallet(@RequestHeader("Authorization") String jwt) throws Exception {
@@ -49,6 +51,26 @@ public class WalletController {
         Order order = orderService.getOrderById(orderId);
 
         Wallet wallet = walletService.payOrderPayment(order,user);
+
+        return new ResponseEntity<>(wallet, HttpStatus.ACCEPTED);
+    }
+
+    @PutMapping("/api/wallet/deposite")
+    public ResponseEntity<Wallet> addBalanceToWallet(@RequestHeader("Authorization") String jwt,@RequestParam(name = "order_id") Long orderId,@RequestParam(name = "payment_id") String paymentId) throws Exception {
+        User user = userService.findUserProfileByJwt(jwt);
+
+        Wallet wallet = walletService.getUserWallet(user);
+
+        PaymentOrder order = paymentService.getPaymentOrderById(orderId);
+
+        Boolean status = paymentService.proccedPaymentOrder(order,paymentId);
+
+//        PaymentResponse res = new PaymentResponse();
+//        res.setPayment_url("deposite_success");
+
+        if(status){
+            wallet=walletService.addBalance(wallet,order.getAmount());
+        }
 
         return new ResponseEntity<>(wallet, HttpStatus.ACCEPTED);
     }

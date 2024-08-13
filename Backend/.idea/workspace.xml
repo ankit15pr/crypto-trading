@@ -4,18 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e01c0262-4da6-4920-9e6a-e5e67805ac59" name="Changes" comment="Add a withdrawal API">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/controller/PaymentDetailsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/controller/WatchlistController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/modal/PaymentDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/modal/Watchlist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/repository/PaymentDetailsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/repository/WatchlistRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/WatchlistService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/WatchlistServiceImpl.java" afterDir="false" />
+    <list default="true" id="e01c0262-4da6-4920-9e6a-e5e67805ac59" name="Changes" comment="Create a Watchlist and store user payment details">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/controller/PaymentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/domain/PaymentMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/domain/PaymentOrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/modal/PaymentOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/repository/PaymentOrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/response/PaymentResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/controller/WalletController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/controller/WalletController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +35,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/pom.xml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/config/AppConfig.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/config/JwtConstant.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/config/JwtProvider.java" root0="SKIP_INSPECTION" />
@@ -43,23 +44,27 @@
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/controller/AuthController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/controller/CoinController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/controller/OrderController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/controller/PaymentController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/controller/PaymentDetailsController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/controller/UserController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/controller/WalletController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/controller/WatchlistController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/controller/WithdrawlController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/domain/PaymentMethod.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/domain/USER_ROLE.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/domain/WithdrawlStatus.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/Asset.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/Coin.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/Order.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/PaymentDetails.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/PaymentOrder.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/TwoFactorOTP.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/User.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/VerificationCode.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/WalletTransaction.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/Withdrawl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/repository/AssetRepository.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/repository/PaymentOrderRepository.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/repository/TwoFactorOtpRepository.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/repository/UserRepository.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/repository/WatchlistRepository.java" root0="SKIP_INSPECTION" />
@@ -73,7 +78,10 @@
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/EmailService.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/ForgetPasswordService.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/OrderServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentDetailsService.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentDetailsServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentService.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/TwoFactorOtpService.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/TwoFactorOtpServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/service/UserServiceImpl.java" root0="SKIP_INSPECTION" />
@@ -163,7 +171,7 @@
       <workItem from="1723301276468" duration="13811000" />
       <workItem from="1723348305621" duration="15852000" />
       <workItem from="1723464533961" duration="13154000" />
-      <workItem from="1723541509233" duration="2229000" />
+      <workItem from="1723541509233" duration="11375000" />
     </task>
     <task id="LOCAL-00001" summary="Create two factor authentication and verification api">
       <option name="closed" value="true" />
@@ -205,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723481003798</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Create a Watchlist and store user payment details">
+      <option name="closed" value="true" />
+      <created>1723543893843</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723543893843</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +283,7 @@
     <MESSAGE value="Create Coin Api and use coingecko.com for trading coin data" />
     <MESSAGE value="Create order asset and wallet API" />
     <MESSAGE value="Add a withdrawal API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a withdrawal API" />
+    <MESSAGE value="Create a Watchlist and store user payment details" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create a Watchlist and store user payment details" />
   </component>
 </project>
