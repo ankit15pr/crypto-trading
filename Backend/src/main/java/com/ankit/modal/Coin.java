@@ -1,6 +1,7 @@
 package com.ankit.modal;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Data;
@@ -84,8 +85,11 @@ public class Coin {
     @JsonProperty("atl_date")
     private String atlDate;
 
-    @JsonProperty("roi")
-    private Object roi; // This can be an Object because it can be null
+//    @JsonProperty("roi")
+//    private Object roi; // This can be an Object because it can be null
+
+    @Column(name = "roi")
+    private String roi;
 
     @JsonProperty("last_updated")
     private String lastUpdated;

@@ -30,7 +30,7 @@ public class PaymentServiceImpl implements PaymentService {
     @Value("${stripe.api.key}")
     private String stripeSecretKey;
 
-    @Value("${razorpay.api}")
+    @Value("${razorpay.api.key}")
     private String apiKey;
 
     @Value("${razorpay.api.secret}")
