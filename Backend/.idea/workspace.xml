@@ -4,22 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e01c0262-4da6-4920-9e6a-e5e67805ac59" name="Changes" comment="Fix bugs related to Sql">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/converter/RoiConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/modal/Roi.java" afterDir="false" />
+    <list default="true" id="e01c0262-4da6-4920-9e6a-e5e67805ac59" name="Changes" comment="Fix bugs related to RazorPay Payment Gateway">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/controller/CoinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/controller/CoinController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/controller/PaymentDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/controller/PaymentDetailsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/controller/WalletController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/controller/WalletController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/modal/Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/modal/Coin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/service/CoinService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/CoinService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/service/CoinServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/CoinServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/modal/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/modal/Wallet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentDetailsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/service/WalletServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/WalletServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +173,7 @@
       <workItem from="1723701926783" duration="3693000" />
       <workItem from="1724334527555" duration="15612000" />
       <workItem from="1724432826575" duration="3565000" />
-      <workItem from="1724504134934" duration="852000" />
+      <workItem from="1724504134934" duration="7545000" />
     </task>
     <task id="LOCAL-00001" summary="Create two factor authentication and verification api">
       <option name="closed" value="true" />
@@ -247,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724344893579</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fix bugs related to RazorPay Payment Gateway">
+      <option name="closed" value="true" />
+      <created>1724505184937</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1724505184937</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,6 +312,7 @@
     <MESSAGE value="Create a Watchlist and store user payment details" />
     <MESSAGE value="Add payment gateway (Razorpay &amp; strip)" />
     <MESSAGE value="Fix bugs related to Sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix bugs related to Sql" />
+    <MESSAGE value="Fix bugs related to RazorPay Payment Gateway" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix bugs related to RazorPay Payment Gateway" />
   </component>
 </project>

@@ -17,5 +17,5 @@ public class Wallet {
     @OneToOne  //Relation between user and wallet
     private User user;
 
-    private BigDecimal balance;
+    private BigDecimal balance=BigDecimal.ZERO;
 }

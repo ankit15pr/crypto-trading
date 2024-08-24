@@ -42,6 +42,7 @@ public class PaymentServiceImpl implements PaymentService {
         paymentOrder.setUser(user);
         paymentOrder.setAmount(amount);
         paymentOrder.setPaymentMethod(paymentMethod);
+        paymentOrder.setStatus(PaymentOrderStatus.PENDING);
         return paymentOrderRepository.save(paymentOrder);
     }
 
@@ -52,7 +53,9 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Override
     public Boolean proccedPaymentOrder(PaymentOrder paymentOrder, String paymentId) throws RazorpayException {
-
+        if(paymentOrder.getStatus()==null){
+            paymentOrder.setStatus(PaymentOrderStatus.PENDING);
+        }
         if(paymentOrder.getStatus().equals(PaymentOrderStatus.PENDING)){
             if(paymentOrder.getPaymentMethod().equals(PaymentMethod.RAZORPAY)){
                 RazorpayClient razorpay= new RazorpayClient(apiKey,apiSecretKey);
@@ -132,14 +135,14 @@ public class PaymentServiceImpl implements PaymentService {
     public PaymentResponse createRazorpayPaymentLink(User user, Long amount, Long orderId) throws RazorpayException {
 
         // Convert amount to paise
-        Long AmountInPaise = amount * 100;
+        Long Amount = amount * 100;
 
         try {
             RazorpayClient razorpay = new RazorpayClient(apiKey, apiSecretKey);
 
             // Create a JSON object with payment link request parameters
             JSONObject paymentLinkRequest = new JSONObject();
-            paymentLinkRequest.put("amount", AmountInPaise);
+            paymentLinkRequest.put("amount", amount);
             paymentLinkRequest.put("currency", "INR");
             paymentLinkRequest.put("description", "Payment for order #" + orderId);
 

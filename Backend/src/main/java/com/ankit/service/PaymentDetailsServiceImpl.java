@@ -18,8 +18,8 @@ public class PaymentDetailsServiceImpl implements PaymentDetailsService {
         paymentDetails.setAccountNumber(accountNumber);
         paymentDetails.setAccountHolderName(accountHolderName);
         paymentDetails.setIfcs(ifsc);
-        paymentDetails.setUser(user);
         paymentDetails.setBankName(bankName);
+        paymentDetails.setUser(user);
         return paymentDetailsRepository.save(paymentDetails);
     }
 
