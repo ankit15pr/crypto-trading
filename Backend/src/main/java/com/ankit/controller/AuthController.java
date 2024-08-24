@@ -8,6 +8,7 @@ import com.ankit.response.AuthResponse;
 import com.ankit.service.CustomUserDetailsService;
 import com.ankit.service.EmailService;
 import com.ankit.service.TwoFactorOtpService;
+import com.ankit.service.WatchlistService;
 import com.ankit.utils.OtpUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -35,6 +36,9 @@ public class AuthController {
     @Autowired
     private EmailService emailService;
 
+    @Autowired
+    private WatchlistService watchlistService;
+
     @PostMapping("/signup")
     public ResponseEntity<AuthResponse> register(@RequestBody User user) throws Exception {
 
@@ -50,6 +54,8 @@ public class AuthController {
         newUser.setFullName(user.getFullName());
 
         User savedUser = userRepository.save(newUser);
+
+        watchlistService.createWatchlist(savedUser);
 
         Authentication auth=new UsernamePasswordAuthenticationToken(
                 user.getEmail(),

@@ -2,7 +2,6 @@ package com.ankit.controller;
 
 import com.ankit.modal.Coin;
 import com.ankit.service.CoinService;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +22,7 @@ public class CoinController {
     private ObjectMapper objectMapper;
 
     @GetMapping
-    ResponseEntity<List<Coin>> getAllCoins(@RequestParam("page") int page) throws Exception {
+    ResponseEntity<List<Coin>> getCoinList(@RequestParam(required = false, name = "page") int page) throws Exception {
         List<Coin> coins=coinService.getCoinList(page);
         return new ResponseEntity<>(coins, HttpStatus.ACCEPTED);
     }
@@ -50,9 +49,9 @@ public class CoinController {
         return ResponseEntity.ok(jsonNode);
     }
 
-    @GetMapping("/trading")
-    ResponseEntity<JsonNode> getTreadingCoin() throws Exception {
-        String coin = coinService.getTradingCoins();
+    @GetMapping("/trending")
+    ResponseEntity<JsonNode> getTrendingCoin() throws Exception {
+        String coin = coinService.getTrendingCoins();
         JsonNode jsonNode = objectMapper.readTree(coin);
         return ResponseEntity.ok(jsonNode);
     }

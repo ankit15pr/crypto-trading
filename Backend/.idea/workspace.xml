@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e01c0262-4da6-4920-9e6a-e5e67805ac59" name="Changes" comment="Add payment gateway (Razorpay &amp; strip)">
+    <list default="true" id="e01c0262-4da6-4920-9e6a-e5e67805ac59" name="Changes" comment="Fix bugs related to Sql">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/converter/RoiConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ankit/modal/Roi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/domain/OrderStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/domain/OrderStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/controller/CoinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/controller/CoinController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/controller/WalletController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/controller/WalletController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/modal/Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/modal/Coin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/modal/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/modal/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/repository/WatchlistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/repository/WatchlistRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/service/CoinService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/CoinService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/service/CoinServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/CoinServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/service/WatchlistServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/WatchlistServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/controller/AuthController.class" afterDir="false" />
@@ -61,6 +66,7 @@
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/User.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/VerificationCode.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/WalletTransaction.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/Watchlist.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/modal/Withdrawl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/repository/AssetRepository.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/ankit/repository/PaymentOrderRepository.java" root0="SKIP_INSPECTION" />
@@ -173,7 +179,9 @@
       <workItem from="1723464533961" duration="13154000" />
       <workItem from="1723541509233" duration="11465000" />
       <workItem from="1723701926783" duration="3693000" />
-      <workItem from="1724334527555" duration="1834000" />
+      <workItem from="1724334527555" duration="15612000" />
+      <workItem from="1724432826575" duration="3565000" />
+      <workItem from="1724504134934" duration="852000" />
     </task>
     <task id="LOCAL-00001" summary="Create two factor authentication and verification api">
       <option name="closed" value="true" />
@@ -231,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723567144024</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fix bugs related to Sql">
+      <option name="closed" value="true" />
+      <created>1724344893579</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1724344893579</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +311,7 @@
     <MESSAGE value="Add a withdrawal API" />
     <MESSAGE value="Create a Watchlist and store user payment details" />
     <MESSAGE value="Add payment gateway (Razorpay &amp; strip)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add payment gateway (Razorpay &amp; strip)" />
+    <MESSAGE value="Fix bugs related to Sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix bugs related to Sql" />
   </component>
 </project>

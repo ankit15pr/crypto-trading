@@ -1,7 +1,9 @@
 package com.ankit.modal;
 
+import com.ankit.converter.RoiConverter;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Data;
@@ -88,8 +90,12 @@ public class Coin {
 //    @JsonProperty("roi")
 //    private Object roi; // This can be an Object because it can be null
 
-    @Column(name = "roi")
-    private String roi;
+//    @Column(name = "roi")
+//    private String roi;
+
+    @Convert(converter = RoiConverter.class)
+    @JsonProperty("roi")
+    private Roi roi;
 
     @JsonProperty("last_updated")
     private String lastUpdated;
