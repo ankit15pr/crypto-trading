@@ -4,14 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e01c0262-4da6-4920-9e6a-e5e67805ac59" name="Changes" comment="Fix bugs related to RazorPay Payment Gateway">
+    <list default="true" id="e01c0262-4da6-4920-9e6a-e5e67805ac59" name="Changes" comment="Fix bugs and Test API">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/controller/PaymentDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/controller/PaymentDetailsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/controller/WalletController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/controller/WalletController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/modal/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/modal/Wallet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/PaymentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/service/WalletServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/service/WalletServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/TradingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/TradingApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/config/AppConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/config/JwtConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/config/JwtConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/config/JwtProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/config/JwtProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/config/JwtTokenValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/config/JwtTokenValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/domain/USER_ROLE.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/domain/USER_ROLE.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/domain/VerificationType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/domain/VerificationType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/modal/TwoFactorAuth.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/modal/TwoFactorAuth.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/modal/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/modal/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/response/AuthResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/response/AuthResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/service/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/service/CustomUserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ankit/TradingApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ankit/TradingApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +182,9 @@
       <workItem from="1723701926783" duration="3693000" />
       <workItem from="1724334527555" duration="15612000" />
       <workItem from="1724432826575" duration="3565000" />
-      <workItem from="1724504134934" duration="7545000" />
+      <workItem from="1724504134934" duration="7768000" />
+      <workItem from="1724677563705" duration="2000" />
+      <workItem from="1724679790752" duration="64000" />
     </task>
     <task id="LOCAL-00001" summary="Create two factor authentication and verification api">
       <option name="closed" value="true" />
@@ -247,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724505184937</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fix bugs and Test API">
+      <option name="closed" value="true" />
+      <created>1724518520036</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1724518520036</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,6 +332,7 @@
     <MESSAGE value="Add payment gateway (Razorpay &amp; strip)" />
     <MESSAGE value="Fix bugs related to Sql" />
     <MESSAGE value="Fix bugs related to RazorPay Payment Gateway" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix bugs related to RazorPay Payment Gateway" />
+    <MESSAGE value="Fix bugs and Test API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix bugs and Test API" />
   </component>
 </project>
