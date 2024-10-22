@@ -39,8 +39,8 @@ const menu = [
     icon: <WalletIcon className="h-6 w-6" />,
   },
   {
-    name: "Withdrawal",
-    path: "/withdrawal",
+    name: "Withdrawl",
+    path: "/withdrawl",
     icon: <CreditCardIcon className="h-6 w-6" />,
   },
   {
