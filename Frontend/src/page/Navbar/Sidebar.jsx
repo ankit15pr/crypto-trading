@@ -8,7 +8,7 @@ import {
   HomeIcon,
   PersonIcon,
 } from "@radix-ui/react-icons";
-import { CreditCardIcon, WalletIcon } from "lucide-react";
+import { BanknoteIcon, CreditCardIcon, PiggyBankIcon, WalletIcon } from "lucide-react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -42,6 +42,11 @@ const menu = [
     name: "Withdrawal",
     path: "/withdrawal",
     icon: <CreditCardIcon className="h-6 w-6" />,
+  },
+  {
+    name: "Payment Details",
+    path: "/payment-details",
+    icon: <BanknoteIcon className="h-6 w-6" />,
   },
   {
     name: "Profile",
