@@ -16,7 +16,7 @@ import Sidebar from "./Sidebar";
 
 function Navbar() {
   return (
-    <div className="px-2 py-3 border-b z-50 bg-background bg-opacity-0 sticky top-0 left-0 right-0 justify-between items-center">
+    <div className="px-2 py-3 border-b z-50 bg-background bg-opacity-0 sticky top-0 left-0 right-0 flex justify-between items-center">
       <div className="flex items-center gap-3">
         <Sheet>
           <SheetTrigger>
@@ -56,7 +56,7 @@ function Navbar() {
           </Button>
         </div>
       </div>
-      <div>
+      <div >
         <Avatar>
           <AvatarFallback>A</AvatarFallback>
         </Avatar>
