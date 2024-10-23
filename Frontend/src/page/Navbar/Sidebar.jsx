@@ -55,7 +55,7 @@ const menu = [
   },
   {
     name: "Logout",
-    path: "/profile",
+    path: "/",
     icon: <ExitIcon className="h-6 w-6" />,
   },
 ];
@@ -63,7 +63,7 @@ const menu = [
 function Sidebar() {
   const navigate= useNavigate();
   return (
-    <div className="mt-10 space-y-5">
+    <div className="mt-3 space-y-5">
       {menu.map((item) => (
         <div key={item.name}>
           <SheetClose className="w-full">
