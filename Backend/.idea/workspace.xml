@@ -5,22 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e01c0262-4da6-4920-9e6a-e5e67805ac59" name="Changes" comment="Fix bugs and Test API">
+      <change beforePath="$PROJECT_DIR$/../.idea/Crypto Trading.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/TradingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/TradingApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/config/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/config/JwtConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/config/JwtConstant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/config/JwtProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/config/JwtProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/config/JwtTokenValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/config/JwtTokenValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/controller/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/domain/USER_ROLE.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/domain/USER_ROLE.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/domain/VerificationType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/domain/VerificationType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/modal/TwoFactorAuth.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/modal/TwoFactorAuth.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/modal/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/modal/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/response/AuthResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/response/AuthResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ankit/service/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ankit/service/CustomUserDetailsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ankit/TradingApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ankit/TradingApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/page/Auth/SigninForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/page/Auth/SigninForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/page/Auth/SignupForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/page/Auth/SignupForm.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,6 +185,9 @@
       <workItem from="1724504134934" duration="7768000" />
       <workItem from="1724677563705" duration="2000" />
       <workItem from="1724679790752" duration="64000" />
+      <workItem from="1729705347172" duration="2198000" />
+      <workItem from="1729761714327" duration="695000" />
+      <workItem from="1729762844318" duration="1959000" />
     </task>
     <task id="LOCAL-00001" summary="Create two factor authentication and verification api">
       <option name="closed" value="true" />

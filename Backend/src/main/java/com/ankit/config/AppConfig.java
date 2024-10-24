@@ -1,6 +1,7 @@
 package com.ankit.config;
 
 import io.jsonwebtoken.Jwt;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -11,6 +12,7 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -30,7 +32,22 @@ public class AppConfig {
     }
 
     private CorsConfigurationSource CorsConfigurationsourse() {
-        return null;
+        return new CorsConfigurationSource() {
+            @Override
+            public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
+                CorsConfiguration cfg = new CorsConfiguration();
+                cfg.setAllowedOrigins(
+                        Arrays.asList("http://localhost:5173",
+                                "http://localhost:3000")
+                );
+                cfg.setAllowedMethods(Collections.singletonList("*"));
+                cfg.setAllowCredentials(true);
+                cfg.setExposedHeaders(Arrays.asList("Authorization"));
+                cfg.setAllowedHeaders(Collections.singletonList("*"));
+                cfg.setMaxAge(3600L);
+                return cfg;
+            }
+        };
     }
 
 }
