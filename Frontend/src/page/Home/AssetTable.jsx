@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Table,
   TableBody,
@@ -9,9 +9,14 @@ import {
 } from "@/components/ui/table";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { getCoinList } from "@/State/Coin/Action";
 
-function AssetTable() {
+function AssetTable({coin = [], category}) {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  
   return (
     <Table>
       <TableHeader>
@@ -26,14 +31,14 @@ function AssetTable() {
       </TableHeader>
 
       <TableBody>
-        {[1, 1, 1, 1, 1, 1, 1, 1, 1].map((item, index) => (
-          <TableRow key={index}>
+        {coin.map((item, index) => (
+          <TableRow key={item.id}>
             <TableCell
               onClick={() => navigate(`/stock-details`)}
               className="font-medium flex items-center gap-2"
             >
               <Avatar className="-z-50">
-                <AvatarImage src="https://assets.coingecko.com/coins/images/1/standard/bitcoin.png?1696501400" />
+                <AvatarImage src={item.image} />
               </Avatar>
               <span>BitCoin</span>
             </TableCell>

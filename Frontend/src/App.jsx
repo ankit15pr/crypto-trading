@@ -19,7 +19,9 @@ import { getUser } from "./State/Auth/Action";
 
 function App() {
 
-  const {auth} = useSelector(store=>store)
+  // const {auth} = useSelector(store=>store)
+  const auth = useSelector(state => state.auth); // Adjust the path if necessary
+
   const dispatch = useDispatch();
 
   console.log("  auth  ",auth);

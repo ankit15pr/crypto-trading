@@ -30,7 +30,7 @@ function SigninForm() {
   };
 
   return (
-    <div px-10 py-2>
+    <div className="px-10 py-2">
       <h1 className="text-xl font-bold text-center pb-3">Login</h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
