@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e01c0262-4da6-4920-9e6a-e5e67805ac59" name="Changes" comment="Fix bugs and Test API">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/State/Store.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/State/Store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ankit/config/JwtTokenValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ankit/config/JwtTokenValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/page/Home/AssetTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/page/Home/AssetTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/page/Home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/page/Home/Home.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +175,13 @@
       <workItem from="1724679790752" duration="64000" />
       <workItem from="1729705347172" duration="2198000" />
       <workItem from="1729761714327" duration="695000" />
-      <workItem from="1729762844318" duration="7087000" />
+      <workItem from="1729762844318" duration="7241000" />
+      <workItem from="1729830133171" duration="641000" />
+      <workItem from="1729831253227" duration="25000" />
+      <workItem from="1729831835833" duration="89000" />
+      <workItem from="1729832338700" duration="584000" />
+      <workItem from="1730010616268" duration="423000" />
+      <workItem from="1730129823506" duration="2227000" />
     </task>
     <task id="LOCAL-00001" summary="Create two factor authentication and verification api">
       <option name="closed" value="true" />

@@ -15,7 +15,9 @@ function Home() {
   const [inputValue, setInputValue] = useState("");
   const [isBotRelease, setIsBotRelease] = useState(false);
   // const {coin}=useSelector(store=>store);
-  const coin = useSelector(state => state.coin); // This assumes `coin` is a slice in your state
+  const coin = useSelector(state => state.coin);
+  console.log("Current coin state:", coin); // Add this line 
+
   const dispatch = useDispatch();
 
   const handleBotRelease = () => setIsBotRelease(!isBotRelease);
@@ -76,7 +78,7 @@ function Home() {
               Top Losers
             </Button>
           </div>
-          <AssetTable coin={coin.coinList} category={category} />
+          <AssetTable coin={coin.getCoinList} category={category} />
         </div>
         <div className="hidden lg:block lg:w-[50%] p-5">
           <StockChart />

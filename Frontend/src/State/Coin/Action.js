@@ -10,6 +10,9 @@ export const getCoinList=(page) => async(dispatch)=>{
 
     try {
         const {data} = await axios.get(`${baseUrl}/coins?page=${page}`)
+        // const response = await axios.get(`${baseUrl}/coins?page=${page}`);
+// console.log("Full API Response:", response.data);
+
         console.log("coin list", data);
         dispatch({type:FETCH_COIN_LIST_SUCCESS, payload:data})
     } catch (error) {

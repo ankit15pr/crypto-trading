@@ -12,11 +12,10 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getCoinList } from "@/State/Coin/Action";
 
-function AssetTable({coin = [], category}) {
+function AssetTable({ coin = [], category }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  
   return (
     <Table>
       <TableHeader>
@@ -40,13 +39,13 @@ function AssetTable({coin = [], category}) {
               <Avatar className="-z-50">
                 <AvatarImage src={item.image} />
               </Avatar>
-              <span>BitCoin</span>
+              <span>{item.name}</span>
             </TableCell>
-            <TableCell>BTC</TableCell>
-            <TableCell>45800690381</TableCell>
-            <TableCell>1342176974465</TableCell>
-            <TableCell>1.94936</TableCell>
-            <TableCell className="text-right">$67949</TableCell>
+            <TableCell>{item.symbol}</TableCell>
+            <TableCell>{item.total_volume}</TableCell>
+            <TableCell>{item.market_cap}</TableCell>
+            <TableCell>{item.ath_change_percentage}</TableCell>
+            <TableCell className="text-right">{item.current_price}</TableCell>
           </TableRow>
         ))}
       </TableBody>
