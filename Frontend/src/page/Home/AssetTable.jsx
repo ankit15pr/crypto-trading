@@ -44,7 +44,7 @@ function AssetTable({ coin = [], category }) {
             <TableCell>{item.symbol}</TableCell>
             <TableCell>{item.total_volume}</TableCell>
             <TableCell>{item.market_cap}</TableCell>
-            <TableCell>{item.ath_change_percentage}</TableCell>
+            <TableCell>{item.price_change_percentage_24h}</TableCell>
             <TableCell className="text-right">{item.current_price}</TableCell>
           </TableRow>
         ))}
