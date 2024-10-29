@@ -16,6 +16,7 @@ import Auth from "./page/Auth/Auth";
 import { useDispatch, useSelector } from "react-redux";
 import { store } from "./State/Store";
 import { getUser } from "./State/Auth/Action";
+import StockChart from "./page/Home/StockChart";
 
 function App() {
 
@@ -41,7 +42,7 @@ function App() {
           <Route path="/wallet" element={<Wallet />} />
           <Route path="/withdrawl" element={<Withdrawl />} />
           <Route path="/payment-details" element={<PaymentDetails />} />
-          <Route path="/stock-details" element={<StockDetails />} />
+          <Route path="/market/bitcoin" element={<StockDetails />} />
           <Route path="/watchlist" element={<Watchlist />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/search" element={<Search />} />

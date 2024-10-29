@@ -2,7 +2,7 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { BookmarkFilledIcon, DotIcon } from "@radix-ui/react-icons";
 import { BookmarkIcon } from "lucide-react";
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Dialog,
   DialogContent,
@@ -13,9 +13,15 @@ import {
 } from "@/components/ui/dialog"
 import TradingForm from "./TradingForm";
 import StockChart from "../Home/StockChart";
+import { useDispatch } from "react-redux";
 
 
 function StockDetails() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    
+  }, []);
   return (
     <div className="p-5 mt-5">
       <div className="flex justify-between">

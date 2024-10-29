@@ -33,7 +33,7 @@ function AssetTable({ coin = [], category }) {
         {coin.map((item, index) => (
           <TableRow key={item.id}>
             <TableCell
-              onClick={() => navigate(`/stock-details`)}
+              onClick={() => navigate(`/market/bitcoin`)}
               className="font-medium flex items-center gap-2"
             >
               <Avatar className="-z-50">
